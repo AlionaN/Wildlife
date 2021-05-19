@@ -1,0 +1,334 @@
+$base-text-color: #f7f7f7
+$btn-border-back: #CD6326
+$h1-color: #CD6326
+$font-dark: #333333
+$back-color: #CCCCCC
+$font-gray: #666666
+$pressed-btn-back: #905415
+
+@font-face
+    font-family: OpenSans
+    src: url('fonts/OpenSans-Regular.ttf')
+@font-face
+    font-family: Roboto
+    src: url('fonts/Roboto-Regular.ttf')
+
+*
+    padding: 0
+    margin: 0
+    box-sizing: border-box
+html
+    font-size: 18px
+body
+    margin: 0 auto
+    font-family: 'OpenSans', sans-serif
+    color: $base-text-color
+button
+    &:focus
+        outline: none
+.container
+    max-width: 1200px
+    margin: 0 auto
+.row
+    display: flex
+.justify-content-between
+    justify-content: space-between
+.align-items-center
+    align-items: center
+    
+.hamburger
+    display: none
+.header
+    padding: 1.1rem 0
+    &__nav
+        min-width: 480px
+        position: relative
+        padding-top: 4px
+    &__nav-list
+        list-style: none
+        display: flex
+        align-items: center
+        justify-content: space-between
+    &__nav-link
+        font-size: 1.25rem
+        color: $base-text-color
+        text-decoration: none
+        transition: all .5s
+        &:hover
+            text-decoration: underline
+        &.btn
+            padding: .5rem 1.3rem
+    &__nav-search
+        transition: all .5s
+        &:hover
+            transform: scale(1.1)
+
+.logo
+    display: flex
+    align-items: center
+    text-decoration: none
+    font-family: 'Roboto', sans-serif
+    transition: all .5s
+    &:hover
+        transform: scale(1.1)
+    &__img
+        margin-right: .83rem
+        width: 70px
+    &__text
+        color: $base-text-color
+        font-size: 1.8rem
+        text-transform: uppercase
+        font-weight: 400
+.btn
+    display: inline-block
+    font-family: 'Roboto', sans-serif
+.btn-bordered
+    color: $base-text-color
+    border: 2px solid $btn-border-back
+    border-radius: 5px
+    transition: all .5s
+    &:hover
+        background-color: $btn-border-back
+        text-decoration: none
+    &:active
+        background-color: $pressed-btn-back
+        border-color: $pressed-btn-back
+.btn-back
+    background-color: $btn-border-back
+    color: $base-text-color
+    border-radius: 5px
+    text-decoration: none
+    transition: all .5s
+    &:hover
+        background-color: #E79026
+    &:active
+        background-color: $pressed-btn-back
+.hero
+    background-color: #02160b
+    background-image: url('assets/hero-block-background.jpg')
+    background-size: cover
+    background-repeat: no-repeat
+    background-position: center center
+    min-height: 780px
+    &__title
+        color: $h1-color
+        font-weight: 400
+        font-size: 2.7rem
+        letter-spacing: 2px
+        margin-top: 5.87rem
+    &__descr
+        text-align: justify
+        width: 15.12rem
+        margin-top: 3rem
+        line-height: 1.5
+    &__btn
+        padding: .9rem 2.38rem
+        font-size: 1.3rem
+        margin-top: 2.6rem
+        border: none
+.articles
+    background-color: $back-color
+    padding: 7rem 0
+    &__title
+        text-align: center
+        color: $font-dark
+        font-size: 2.67rem
+        font-weight: 400
+    &__subtitle
+        text-align: center
+        color: $font-gray
+        font-size: 1.32rem
+        margin-top: 1.4rem
+    &__slider
+        display: flex
+        justify-content: space-between
+        align-items: center
+        margin-top: 6.67rem
+        &-inner
+            display: flex
+            justify-content: space-between
+            min-width: 1020px
+            transition: all .5s
+        &-next 
+            transform: rotate(180deg)
+        &-nav
+            border: none
+            background-color: transparent
+        &-nav:hover
+            cursor: pointer
+    &__slide
+        position: relative
+        overflow: hidden
+        &:hover
+            cursor: pointer
+            .articles__slide-img
+                transform: scale(1.2)
+        &-img
+            transition: all .5s
+            width: 300px                
+        &-title
+            font-size: 1.22rem
+            position: absolute
+            bottom: 83px
+            left: 50%
+            transform: translateX(-50%)
+        &-descr
+            font-size: .94rem
+            position: absolute
+            bottom: 45px
+            left: 50%
+            transform: translateX(-50%)
+            width: fit-content
+.notify
+    background-color: $back-color
+    padding-top: 6.1rem
+    padding-bottom: 13.2rem
+    &__title
+        color: $font-dark
+        text-align: center
+        font-size: 1.5rem
+    &__form
+        display: flex
+        justify-content: center
+        margin-top: 3.4rem
+    &__email
+        padding: 1rem 0 .4rem .8rem
+        background: transparent
+        border: 1px solid #666
+        border-radius: 2px 0 0 2px
+        width: 540px
+        &::placeholder
+            font-size: 1.25rem
+            color: $font-gray
+    &__btn
+        font-size: 1.3rem
+        padding: 1rem 1.9rem
+        border: none
+        border-radius: 0 6px 6px 0
+.footer
+    background-color: #181617
+    background-image: url('assets/footer-background.jpg')
+    background-size: cover
+    padding: 8.3rem 0
+    &__nav
+        min-width: 475px
+        &-list
+            display: flex
+            justify-content: space-between
+            list-style: none
+        &-link
+            color: $base-text-color
+            font-size: 1.24rem
+            text-decoration: none
+            &:hover
+                text-decoration: underline
+    &__contacts
+        min-width: 240px
+    .socials
+        display: flex
+        justify-content: space-between
+        list-style: none
+        &__icon
+            &::before
+                content: ''
+                display: block
+                width: 40px
+                height: 40px
+                background-size: contain
+                background-repeat: no-repeat
+                transition: all .5s
+            &.facebook::before
+                background-image: url('assets/facebook.svg')
+            &.instagram::before
+                background-image: url('assets/instagram.svg')
+            &.pinterest::before
+                background-image: url('assets/pinterest.svg')
+            &.telegram::before
+                background-image: url('assets/telegram.svg')
+        &__item:hover .socials__icon::before
+                transform: scale(1.1)
+@media( max-width: 1024px )
+    .articles__slide+.articles__slide
+        margin: 0 1.5rem
+    .articles__slide
+        margin: 0 1.5rem
+    .footer__inner
+        flex-direction: column
+    .footer__inner > * + *
+        margin-top: 1rem
+@media ( max-width: 768px )
+    .header
+        position: relative
+    .hamburger
+        display: block
+        width: 2rem
+        height: 1.5rem
+        position: relative
+        z-index: 1
+        span
+            width: 100%
+            height: 1px
+            background-color: #fff
+            display: block
+            position: absolute
+            transition: all .5rem
+        span:nth-child(1)
+            top: 0
+        span:nth-child(2)
+            top: 50%
+            transform: translateY(-50%)
+        span:nth-child(3)
+            bottom: 0
+        &:hover
+            cursor: pointer
+        &__active
+            span:nth-child(1)
+                top: 50.5%
+                transform: rotate(45deg)
+            span:nth-child(2)
+                display: none
+            span:nth-child(3)
+                bottom: 50.5%
+                transform: rotate(-45deg)
+    .header__nav-list
+        top: 0
+        flex-direction: column
+        background-color: rgba(0,0,0,.5)
+        width: 100%
+        padding: 5rem 0 2rem
+        position: absolute
+        left: -100%
+        transition: all .5s
+        .header__nav-item+.header__nav-item
+            margin-left: 0
+            margin-top: 1rem
+    .logo
+        z-index: 1
+    .menu__active
+        left: 0
+    .container
+        padding: 0 3rem
+    .articles__slide-img
+        width: 239px
+@media ( max-width: 425px )
+    .container
+        padding: 0 1rem
+    .hero__descr
+        width: initial
+    .articles__slide+.articles__slide
+        margin: 0
+    .articles__slide
+        margin: 0
+    .footer__nav-list
+        flex-direction: column
+        align-items: center
+        .footer__nav-item+.footer__nav-item
+            margin-left: 0
+            margin-top: 1rem
+@media ( max-width: 320px )
+    .articles__slide-img
+        width: 207px
+    .notify__email
+        width: 150px
+    .notify__btn
+        padding: .94rem 1rem
